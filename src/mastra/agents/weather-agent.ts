@@ -6,11 +6,10 @@ import { getSQLRuleSet, mcp } from "./mcp";
 
 export const weatherAgent = new Agent({
   name: "Weather Agent",
-  instructions:
-    `
+  instructions: `
       You are a helpful weather assistant that does text2sql
 
-` + (await getSQLRuleSet()),
+`,
   model: openai("gpt-4o-mini"),
   tools: await mcp.getTools(),
   memory: new Memory({
