@@ -3,8 +3,8 @@ import { MCPClient } from "@mastra/mcp";
 export const mcp = new MCPClient({
   servers: {
     peaka: {
-      command: "npx",
-      args: ["-w", "/tmp", "@peaka/mcp-server-peaka@latest"],
+      command: "npm",
+      args: ["exec", "--prefix", "/tmp", "@peaka/mcp-server-peaka@latest"],
       env: {
         PEAKA_API_KEY: "<YOUR_API_KEY>",
       },
