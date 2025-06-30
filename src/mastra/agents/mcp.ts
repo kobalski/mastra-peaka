@@ -1,13 +1,14 @@
 import { MCPClient } from "@mastra/mcp";
 process.env.HOME = "/tmp";
 
+console.log("PEAKA_API_KEY" + process.env.PEAKA_API_KEY);
 export const mcp = new MCPClient({
   servers: {
     peaka: {
       command: "npx",
       args: ["-y", "@peaka/mcp-server-peaka@latest"],
       env: {
-        PEAKA_API_KEY: "<YOUR_API_KEY>",
+        PEAKA_API_KEY: process.env.PEAKA_API_KEY ?? "",
       },
     },
   },
