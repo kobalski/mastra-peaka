@@ -4,7 +4,7 @@ export const mcp = new MCPClient({
   servers: {
     peaka: {
       command: "npx",
-      args: ["-y", "@peaka/mcp-server-peaka@latest"],
+      args: ["-y", "@peaka/mcp-server-peaka@latest", "--prefix", "/tmp"],
       env: {
         PEAKA_API_KEY: "<YOUR_API_KEY>",
       },
